@@ -1,0 +1,167 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade {
+  animation-name: fadein;
+  animation-duration: 0.65s;
+}
+.d-fade::before {
+  display: none;
+  animation: fadein;
+  animation-duration: 0.65s;
+  animation-delay: 1s;
+}
+.d-fade::after {
+  display: block;
+  animation: fadein;
+  animation-duration: 0.65s;
+  animation-delay: 1s;
+}
+/*
+  Navbar Styling
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.menu {
+  display: flex;
+  user-select: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu-index {
+  align-items: flex-start;
+  text-decoration: none;
+  color: black;
+}
+
+.links {
+  padding-right: 2rem;
+}
+
+.menu-projects {
+  text-decoration: none;
+  color: black;
+  padding-right: 1rem;
+  opacity: 0.75;
+}
+.menu-about {
+  text-decoration: none;
+  color: black;
+  padding-right: 1rem;
+  opacity: 0.75;
+}
+.menu-contact {
+  text-decoration: none;
+  color: black;
+  padding-right: 1rem;
+  opacity: 0.75;
+}
+.menu-projects:hover {
+  text-decoration: none;
+  color: black;
+  padding-right: 1rem;
+  opacity: 1;
+  transition: 0.55s;
+}
+.menu-about:hover {
+  text-decoration: none;
+  color: black;
+  padding-right: 1rem;
+  opacity: 1;
+  transition: 0.55s;
+}
+.menu-contact:hover {
+  text-decoration: none;
+  color: black;
+  padding-right: 1rem;
+  opacity: 1;
+  transition: 0.55s;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 60px;
+}
+/*
+  welcome message
+*/
+
+.welcome-message {
+  margin: 2rem;
+  padding-top: 5%;
+  font-family: 'Montserrat', sans-serif;
+}
+.welcome-message small {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+.link {
+  text-decoration: none;
+  color: gray;
+  opacity: 0.75;
+}
+.link:hover {
+  text-decoration: none;
+  color: gray;
+  opacity: 1;
+  transition: 0.45s;
+}
+.right {
+  float: right;
+  margin-top: -10rem;
+  user-select: none;
+}
+#circle-55-blue {
+  background: blue;
+  border-radius: 50%;
+  opacity: 0.55;
+}
+#circle-60-orange {
+  background: orange;
+  border-radius: 50%;
+  opacity: 0.60;
+  margin-right: -4rem;
+  margin-bottom: -2rem;
+}
+#circle-65-red {
+  background: red;
+  border-radius: 50%;
+  opacity: 0.60;
+  margin-right: -6rem;
+  margin-bottom: 5rem;
+}
+@media only screen and (max-width: 999px) {
+  .display-cm {
+    display: none;
+    transition: 0.55s;
+  }
+  #circle-55-blue {
+    display: none;
+    transition: 0.55s;
+  }
+  #circle-65-red {
+    display: none;
+    transition: 0.55s;
+  }
+  #circle-60-orange {
+    display: none;
+    transition: 0.55s;
+  }
+}
+@media only screen and (min-width: 999px) {
+  .display-cm {
+    display: block;
+  }
+}
